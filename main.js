@@ -80,6 +80,11 @@ $.fn.slider = function() {
 
         });
         $(this).on("change", function() {
+            var points = [];            
+            var step = +this.step;
+            if (typeof this.points !== "undefined") {
+                points = this.points;
+            };          
             var value = $(this).val();
             if(parseInt($(this).val())<parseInt($(this).attr("min"))){
                 $(this).val($(this).attr("min"))
