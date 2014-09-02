@@ -25,6 +25,9 @@ $.fn.slider = function() {
         }
         this.step = $(this).data("step")?parseInt($(this).data("step")):1;  
         moveTo(elem);
+        if ( parseInt($(elem).val())>(parseInt( $(this).attr("max") )/2) ) {
+            $(elem).css("text-align","left");
+        };
     });
     $(".slid").mousedown(function() {        
         var that = this;
