@@ -29,7 +29,7 @@ $.fn.slider = function() {
             var $input = $(this).parent().children("input");
             var input = $input[0];
             var points = [];            
-            var step = input.step;
+            var step = +input.step;
             if (typeof input.points !== "undefined") {
                 points = input.points;
             };          
